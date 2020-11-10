@@ -117,7 +117,7 @@ end
 function Player:move(dt)
    if love.keyboard.isDown("d", "right") then
       self.xVel = math.min(self.xVel + self.acceleration * dt, self.maxSpeed)
-   elseif love.keyboard.isDown("a", "right") then
+   elseif love.keyboard.isDown("a", "left") then
       self.xVel = math.max(self.xVel - self.acceleration * dt, -self.maxSpeed)
    else
       self:applyFriction(dt)
