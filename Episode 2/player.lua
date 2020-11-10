@@ -3,7 +3,7 @@
 Player = {}
 
 function Player:load()
-   self.x = 100 
+   self.x = 100
    self.y = 0
    self.width = 20
    self.height = 60
@@ -45,7 +45,7 @@ function Player:move(dt)
             self.xVel = self.maxSpeed
          end
       end
-   elseif love.keyboard.isDown("a", "right") then
+   elseif love.keyboard.isDown("a", "left") then
       if self.xVel > -self.maxSpeed then
          if self.xVel - self.acceleration * dt > -self.maxSpeed then
             self.xVel = self.xVel - self.acceleration * dt
