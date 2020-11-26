@@ -3,7 +3,7 @@
 local Stone = {img = love.graphics.newImage("assets/stone.png")}
 Stone.__index = Stone
 
-Stone.width = Stone.img:getWidth()
+Stone.width = Stone.img:getWidth() 
 Stone.height = Stone.img:getHeight()
 
 local ActiveStones = {}
