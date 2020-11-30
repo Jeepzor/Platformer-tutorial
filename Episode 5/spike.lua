@@ -29,7 +29,7 @@ function Spike:update(dt)
 end
 
 function Spike:draw()
-   love.graphics.draw(self.img, self.x, self.y, 0, self.scaleX, 1, self.width / 2, self.height / 2)
+   love.graphics.draw(self.img, self.x, self.y, 0, 1, 1, self.width / 2, self.height / 2)
 end
 
 function Spike.updateAll(dt)
