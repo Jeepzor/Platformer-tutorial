@@ -3,3 +3,4 @@ Note: The code and assets have different licences
 
 Code: WTFPL (Do whatever you want, no restrictions)
 Art: BY-NC-ND (https://creativecommons.org/licenses/by-nc-nd/4.0/) More restricted.
+Font: https://www.dafont.com/5x5.font
