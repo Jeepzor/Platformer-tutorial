@@ -24,6 +24,7 @@ function Enemy.new(x,y)
    instance.speed = 100
    instance.speedMod = 1
    instance.xVel = instance.speed
+   instance.scaleX = 1
 
    instance.rageCounter = 0
    instance.rageTrigger = 3
@@ -80,6 +81,7 @@ end
 
 function Enemy:flipDirection()
    self.xVel = -self.xVel
+   self.scaleX = -self.scaleX
 end
 
 function Enemy:animate(dt)
@@ -106,11 +108,7 @@ function Enemy:syncPhysics()
 end
 
 function Enemy:draw()
-   local scaleX = 1
-   if self.xVel < 0 then
-      scaleX = -1
-   end
-   love.graphics.draw(self.animation.draw, self.x, self.y + self.offsetY, self.r, scaleX, 1, self.width / 2, self.height / 2)
+   love.graphics.draw(self.animation.draw, self.x, self.y + self.offsetY, self.r, self.scaleX, 1, self.width / 2, self.height / 2)
 end
 
 function Enemy.updateAll(dt)
